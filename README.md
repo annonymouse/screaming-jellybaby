@@ -11,6 +11,32 @@ As well as an internet connected Raspberry Pi and all its essential peripherals,
 - Two *female-to-female* jumper wires
 - A jelly baby
 
+## Step 0: Logging into your Rapsberry Pi
+
+For this exercise we'll be using something called a terminal emulator which will basically give us a command prompt to our raspberry pi.  In order to use this you'll need to download a program called *Putty* from the internet.
+
+[Download Putty](http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe)
+
+Once this is done, run it and use the following information to log in to the Raspberry Pi following the following screens
+
+![](./images/putty.png)
+
+	Host Name: 192.168.137.2
+	Protocol: SSH
+	
+Then another window will open asking for your username/password which are
+
+	Username: pi
+	Password: raspberry
+
+This should give you a window with a prompt that looks like 
+
+```
+pi@raspberry ~ $
+```
+
+and you're good to go!
+
 ## Step 1: Wire up a jelly baby
 
 To begin to turn a simple jelly baby into a switch, you will attach cables to it and then connect them to the GPIO pins on a Raspberry Pi.
@@ -43,7 +69,8 @@ So far you have created your input device and have your Raspberry Pi set up and 
 
 ### Activity checklist:
 
-1.  After logging into your Raspberry Pi you will see the following text:
+1.
+  After logging into your Raspberry Pi you will see the following text:
 
     ```
     pi@raspberry ~ $
