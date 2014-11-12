@@ -140,7 +140,7 @@ The final step to make your jelly baby scream is to write a program in Python; i
     ```python
     while True:
         if GPIO.input(3) == False:
-            os.system('omxplayer la.mp3')
+            print "OUCH"
             time.sleep(1);
     ```
 
