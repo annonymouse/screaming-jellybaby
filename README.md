@@ -2,6 +2,8 @@
 
 You will learn how to turn a jelly baby into an input device for your Raspberry Pi. You will then create a program to make it scream when it is squeezed.
 
+*Note to teachers: These instructions have been modified to reflect the use of laptops with a terminal emulator to access the Pi rather than direct video and keyboard, and the possibility of flaky network connnections.*
+
 ## What you will need
 
 As well as an internet connected Raspberry Pi and all its essential peripherals, you'll need:
@@ -10,6 +12,7 @@ As well as an internet connected Raspberry Pi and all its essential peripherals,
 - Two metal paper clips or dress pins
 - Two *female-to-female* jumper wires
 - A jelly baby
+- A computer using Windows Internet Connection Sharing (this should have been set up by your helper)
 
 ## Step 0: Logging into your Rapsberry Pi
 
@@ -83,17 +86,24 @@ So far you have created your input device and have your Raspberry Pi set up and 
     wget http://goo.gl/MOXGX3 -O la.mp3 --no-check-certificate
     ```
 
+	If this doesn't work don't worry, there's a copy on the RaspberryPi also, so instead run 
+
+	```
+	cp backup/la.mp3 .
+	```
+	which will copy it.
+
 3.  Now test that you can play the sound file using `omxplayer` by typing:
 
     ```
     omxplayer la.mp3
     ```
 
-    ```omxplayer``` will play the downloaded sound file and you should hear it from the speakers or headphones connected to your Pi.
+	```omxplayer``` will play the downloaded sound file and you should hear it from the speakers or headphones connected to your Pi.
 
-    If you cannot hear anything, make sure that your headphones or speakers are connected correctly.  If the jack/plug looks like the picture below (notice the three black bands) you may find that it will only work if you pull the plug out by a few millimetres.
+	If you cannot hear anything, make sure that your headphones or speakers are connected correctly.  If the jack/plug looks like the picture below (notice the three black bands) you may find that it will only work if you pull the plug out by a few millimetres.  If it *still* doesn't work check with your helper.
 
-    ![](./images/3-5mmjack.jpg)
+	![](./images/3-5mmjack.jpg)
 
 ## Step 3: Write a program in Python
 
@@ -141,6 +151,7 @@ The final step to make your jelly baby scream is to write a program in Python; i
     while True:
         if GPIO.input(3) == False:
             print "OUCH"
+            os.system('omxplayer la.mp3')
             time.sleep(1);
     ```
 
@@ -160,7 +171,7 @@ The final step to make your jelly baby scream is to write a program in Python; i
 
 - Using a real button or switch connected to a breadboard
 - Changing the sound that plays when the device is pressed
-- Can you think of a way to use more inputs?
+- Can you think of a way to use more inputs?  Wire up two jelly babies?
 
 ## Licence
 
@@ -170,4 +181,4 @@ Unless otherwise specified, everything in this repository is covered by the foll
 
 ***Screaming Jelly Baby*** by the [Raspberry Pi Foundation](http://raspberrypi.org) is licenced under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
 
-Based on a work at https://github.com/raspberrypilearning/screaming-jellybaby
+Modified by Alex Yong, and based on a work at https://github.com/raspberrypilearning/screaming-jellybaby
