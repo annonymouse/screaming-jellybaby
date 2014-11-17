@@ -12,7 +12,7 @@ As well as an internet connected Raspberry Pi and all its essential peripherals,
 - Two metal paper clips or dress pins
 - Two *female-to-female* jumper wires
 - A jelly baby
-- A computer using Windows Internet Connection Sharing (this should have been set up by your helper)
+- A computer using [Windows Internet Connection Sharing](http://windows.microsoft.com/en-us/windows/using-internet-connection-sharing) to connect the Pi to a network and your computer.
 
 ## Step 0: Logging into your Rapsberry Pi
 
@@ -20,13 +20,14 @@ For this exercise we'll be using something called a terminal emulator which will
 
 [Download Putty](http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe)
 
-Once this is done, run it and use the following information to log in to the Raspberry Pi following the following screens
-
-![](./images/putty.png)
+Once this is done, run it and use the following information to log in to the Raspberry Pi on the following screen
 
 	Host Name: 192.168.137.2
+	Port: 22
 	Protocol: SSH
 	
+![](./images/putty.png)
+
 Then another window will open asking for your username/password which are
 
 	Username: pi
@@ -61,6 +62,9 @@ To begin to turn a simple jelly baby into a switch, you will attach cables to it
 6. Take the end of the other jumper lead and push it onto pin 25 of the GPIO header which is connected to ground.
 
     **Warning:** You can damage your Raspberry Pi if you do not use the GPIO pins correctly!
+	It should look something like this when you're done (except instead of a switch you'll have a jelly baby)
+	![](./images/pi-layout.svg)
+
 
 7. Make sure your Raspberry Pi has an internet connection, and speakers or headphones so that you can hear your jelly baby screaming. If you are using headphones or a speaker on the Raspberry Pi, you will need to run the following command to redirect sound to the headphone socket:
 
