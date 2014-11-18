@@ -63,7 +63,7 @@ To begin to turn a simple jelly baby into a switch, you will attach cables to it
 
     **Warning:** You can damage your Raspberry Pi if you do not use the GPIO pins correctly!
 	It should look something like this when you're done (except instead of a switch you'll have a jelly baby)
-	![](./images/pi-layout.svg)
+	![](./images/pi-layout.png)
 
 
 7. Make sure your Raspberry Pi has an internet connection, and speakers or headphones so that you can hear your jelly baby screaming. If you are using headphones or a speaker on the Raspberry Pi, you will need to run the following command to redirect sound to the headphone socket:
@@ -79,10 +79,11 @@ So far you have created your input device and have your Raspberry Pi set up and 
 1.
   After logging into your Raspberry Pi you will see the following text:
 
-    ```
-    pi@raspberry ~ $
-    ```
-    The Raspberry Pi is waiting for you to type in a command to do something. This is referred to as the command line.
+  ```
+  pi@raspberry ~ $
+  ```
+  
+  The Raspberry Pi is waiting for you to type in a command to do something. This is referred to as the command line.
 
 2.  Download an mp3 sound effect to play when the jelly baby is pressed. Enter the following command; it should be typed on one line with the same uppercase and lowercase characters:
 
