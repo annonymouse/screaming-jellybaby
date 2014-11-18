@@ -63,7 +63,7 @@ To begin to turn a simple jelly baby into a switch, you will attach cables to it
 
     **Warning:** You can damage your Raspberry Pi if you do not use the GPIO pins correctly!
 	It should look something like this when you're done (except instead of a switch you'll have a jelly baby)
-	![](./images/pi-layout.png)
+	![](./images/Pi-layout.png)
 
 
 7. Make sure your Raspberry Pi has an internet connection, and speakers or headphones so that you can hear your jelly baby screaming. If you are using headphones or a speaker on the Raspberry Pi, you will need to run the following command to redirect sound to the headphone socket:
